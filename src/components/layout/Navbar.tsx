@@ -51,8 +51,8 @@ export default function Navbar() {
               key={item.label}
               className={item.label === "Contact" ? "navbar__contact-link" : ""}
               href={item.href}
-              target={item.external ? "_blank" : undefined}
-              rel={item.external ? "noreferrer" : undefined}
+              target={"external" in item && item.external ? "_blank" : undefined}
+              rel={"external" in item && item.external ? "noopener noreferrer" : undefined}
             >
               {item.label}
             </a>
@@ -97,8 +97,8 @@ export default function Navbar() {
               <a
                 key={item.label}
                 href={item.href}
-                target={item.external ? "_blank" : undefined}
-                rel={item.external ? "noreferrer" : undefined}
+                target={"external" in item && item.external ? "_blank" : undefined}
+                rel={"external" in item && item.external ? "noopener noreferrer" : undefined}
                 onClick={closeMenu}
               >
                 {item.label}
