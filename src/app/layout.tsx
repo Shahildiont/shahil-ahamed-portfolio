@@ -1,7 +1,11 @@
+
 import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
+  metadataBase: new URL(
+    "https://shahil-ahamed-portfolio-git-main-shahs-projects-cdf39e3c.vercel.app"
+  ),
   title: "Shahil Ahamed | Full Stack Developer",
   description:
     "Portfolio of Shahil Ahamed, a Full Stack Developer building production-ready applications with React, Next.js, Node.js, TypeScript, and MongoDB.",
